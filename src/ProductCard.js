@@ -8,8 +8,8 @@ export default function ProductCard({ imgUrl, alt = "", description }) {
       <h3 className="product__title">{title} </h3>
       <p className="product__introduction">{intro}</p>
       <div className="product__prices ">
-        <p className="product__price--origin">${originPrice}</p>
         <p className="product__price--current">${currentPrice}</p>
+        <p className="product__price--origin">${originPrice}</p>
       </div>
     </article>
   );

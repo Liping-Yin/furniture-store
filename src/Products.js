@@ -24,8 +24,8 @@ export default function Products() {
 
       <div className="products container">
         <ProductCard
-          imgUrl="/images/blue_chair.png"
-          alt="blue chair"
+          imgUrl="/images/yellow_chair.png"
+          alt="yellow chair"
           description={{
             title: "WOMAN CHAIR(HSD 3356)",
             intro:
@@ -46,8 +46,8 @@ export default function Products() {
           }}
         />
         <ProductCard
-          imgUrl="/images/blue_chair.png"
-          alt="blue chair"
+          imgUrl="/images/green_chair.png"
+          alt="green chair"
           description={{
             title: "WOMAN CHAIR(HSD 3356)",
             intro:
