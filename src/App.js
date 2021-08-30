@@ -1,13 +1,13 @@
-import ProductCard from "./ProductCard";
+import Products from "./Products";
 function App() {
   return (
     <div className="app">
-      <header className="app-header">
-        <div className="navigation">
-          <div className="container">
-            <div className="logo">
-              <span>F</span>urniture
-            </div>
+      <header className="app-header container">
+        <div className="navigation container">
+          <div className="logo">
+            <span>F</span>urniture
+          </div>
+          <div className="header__nav">
             <nav className="nav nav--desktop">
               <ul>
                 <li>
@@ -71,53 +71,11 @@ function App() {
         </div>
       </header>
       <main>
-        <section className="products-section ">
-          <div className="section__header container">
-            <div className="section__title">PRODUCTS</div>
-            <div className="section__filter">
-           <select name="products" id="product-selection">
-             <option value="popular">POPULAR</option></select>t
-            </div>
-          </div>
-
-          <div className="products container">
-            <ProductCard
-              imgUrl="/images/blue_chair.png"
-              alt="blue chair"
-              description={{
-                title: "WOMAN CHAIR(HSD 3356)",
-                intro:
-                  " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, tempore.",
-                originPrice: 99,
-                currentPrice: 80,
-              }}
-            />
-            <ProductCard
-              imgUrl="/images/blue_chair.png"
-              alt="blue chair"
-              description={{
-                title: "WOMAN CHAIR(HSD 3356)",
-                intro:
-                  " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, tempore.",
-                originPrice: 99,
-                currentPrice: 80,
-              }}
-            />
-            <ProductCard
-              imgUrl="/images/blue_chair.png"
-              alt="blue chair"
-              description={{
-                title: "WOMAN CHAIR(HSD 3356)",
-                intro:
-                  " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, tempore.",
-                originPrice: 99,
-                currentPrice: 80,
-              }}
-            />
-          </div>
-        </section>
+        <Products />
       </main>
-      <footer></footer>
+      <footer className="container">
+        <p>Copyright reserved</p>
+      </footer>
     </div>
   );
 }

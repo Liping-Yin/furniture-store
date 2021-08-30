@@ -34,6 +34,7 @@ img {
 }
 a {
   all: unset;
+  cursor: pointer;
 }
 ul {
   list-style: none;
@@ -45,6 +46,17 @@ ul {
   text-align: center;
   border-radius: 20px;
   padding: 0.1em 2em;
+  cursor: pointer;
+  border: none;
+  background: none;
+  &.btn--toggle {
+    padding: 0;
+    &:active,
+    &:focus {
+      color: $secondary;
+    }
+  }
+
   &.btn--primary {
     border: 1px solid $secondary;
     background-color: $secondary;
@@ -68,12 +80,17 @@ ul {
   justify-content: center;
   align-items: center;
 }
-
-header {
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.app-header {
   width: 100%;
   min-height: 100vh;
   background-color: $primary;
   color: $neutral-l;
+
   .navigation {
     position: fixed;
     width: 100%;
@@ -81,8 +98,9 @@ header {
     top: 0;
     left: 0;
     font-size: 1.8rem;
+    // background-color: $primary;
     z-index: 1000;
-    .container {
+    &.container {
       justify-content: space-between;
     }
 
@@ -93,39 +111,42 @@ header {
         font-size: 2rem;
       }
     }
-    .nav {
-      position: absolute;
-      right: 0;
-      &.nav--desktop {
-        visibility: hidden;
-        ul {
-          display: flex;
-          align-items: center;
-          li {
-            margin: 0 1rem;
+    .header__nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+      .nav {
+        position: absolute;
+        right: 0;
+        &.nav--desktop {
+          visibility: hidden;
+          ul {
+            display: flex;
+            align-items: center;
+            li {
+              margin: 0 1rem;
+            }
+          }
+          @media screen and (min-width: $breakpoint-sm) {
+            visibility: visible;
           }
         }
-        @media screen and (min-width: $breakpoint-sm) {
-          visibility: visible;
-        }
-      }
-      &.nav--mobile {
-        visibility: hidden;
-        font-size: 2rem;
-        @media screen and (max-width: $breakpoint-sm) {
-          visibility: visible;
+        &.nav--mobile {
+          visibility: hidden;
+          font-size: 2rem;
+          @media screen and (max-width: $breakpoint-sm) {
+            visibility: visible;
+          }
         }
       }
     }
   }
   .hero {
-    position: absolute;
-    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
     padding: 0 5vw;
     @media screen and (max-width: $breakpoint-sm) {
       flex-direction: column;
@@ -139,6 +160,9 @@ header {
       align-items: flex-start;
       font-size: 1.6rem;
       font-weight: 400;
+      @media screen and (max-width: $breakpoint-sm) {
+        align-items: center;
+      }
       .hero__title {
         font-size: 1.6rem;
         font-weight: 400;
@@ -146,15 +170,33 @@ header {
       .hero__slogan {
         font-size: 3rem;
         font-weight: 900;
+        margin: 1rem 0;
         display: block;
+        @media screen and(min-width:$breakpoint-md) {
+          font-size: 4rem;
+          line-height: 6rem;
+        }
+
+        @media screen and(min-width:$breakpoint-lg) {
+          font-size: 6rem;
+          line-height: 9rem;
+        }
       }
       .hero__links {
         display: flex;
         gap: 1rem;
+        margin-top: 2rem;
+        @media screen and (max-width: $breakpoint-sm) {
+          flex-direction: column;
+          gap: 1rem;
+        }
         .btn {
           font-size: 1rem;
           margin-top: 3rem;
-
+          font-weight: 600;
+          @media screen and (max-width: $breakpoint-sm) {
+            margin-top: 0;
+          }
           @media screen and (min-with: $breakpoint-sm) {
             font-size: 1.4rem;
           }
@@ -163,10 +205,6 @@ header {
             margin-bottom: 2rem;
           }
         }
-      }
-
-      @media screen and (max-width: $breakpoint-sm) {
-        align-items: center;
       }
     }
     .hero__right {
@@ -187,11 +225,12 @@ header {
 
 .product {
   background-color: $primary-variant-1;
+
   &.container {
     flex-direction: column;
+    padding: 2rem;
   }
   .product__pic {
-    margin: 2rem;
     @media screen and (max-width: $breakpoint-sm) {
       max-width: 50vw;
     }
@@ -205,8 +244,8 @@ header {
 
 .products {
   //   padding: 0 3vw;
-  gap: 1rem;
-  margin-top: 10%;
+  gap: 2rem;
+  margin-top: 5%;
   @media screen and (max-width: $breakpoint-sm) {
     margin-top: 100%;
   }
@@ -217,12 +256,64 @@ header {
     }
   }
 }
+
 section {
   width: 100%;
   padding: 0 5vw;
+  margin-top: 10%;
   .section__header {
     &.container {
       justify-content: space-between;
+
+      @media screen and (max-width: $breakpoint-sm) {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    .section__title {
+      flex: 1;
+      font-size: 3rem;
+      font-weight: 600;
+      @media screen and (max-width: $breakpoint-sm) {
+        font-size: 2rem;
+      }
+    }
+    .section__filter {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      @media screen and (max-width: $breakpoint-sm) {
+        width: 100%;
+      }
+      .btn--toggle {
+        font-weight: 600;
+        @media screen and (max-width: $breakpoint-md) {
+          font-size: 1rem;
+        }
+      }
+      .filter-title {
+        font-size: 2em;
+        font-weight: 600;
+        color: $secondary;
+        @media screen and (max-width: $breakpoint-md) {
+          font-size: 1.2rem;
+        }
+      }
     }
   }
+  .products {
+    @media screen and (max-width: $breakpoint-sm) {
+      margin-top: 5%;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 3rem 5vw;
+  background-color: $primary;
+  color: $neutral-l;
+  font-size: 1.6rem;
+  margin-top: 5%;
 }
