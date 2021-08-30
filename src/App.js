@@ -1,3 +1,4 @@
+import ProductCard from "./ProductCard";
 function App() {
   return (
     <div className="app">
@@ -69,6 +70,53 @@ function App() {
           </div>
         </div>
       </header>
+      <main>
+        <section className="products-section ">
+          <div className="section__header container">
+            <div className="section__title">PRODUCTS</div>
+            <div className="section__filter">
+           <select name="products" id="product-selection">
+             <option value="popular">POPULAR</option></select>t
+            </div>
+          </div>
+
+          <div className="products container">
+            <ProductCard
+              imgUrl="/images/blue_chair.png"
+              alt="blue chair"
+              description={{
+                title: "WOMAN CHAIR(HSD 3356)",
+                intro:
+                  " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, tempore.",
+                originPrice: 99,
+                currentPrice: 80,
+              }}
+            />
+            <ProductCard
+              imgUrl="/images/blue_chair.png"
+              alt="blue chair"
+              description={{
+                title: "WOMAN CHAIR(HSD 3356)",
+                intro:
+                  " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, tempore.",
+                originPrice: 99,
+                currentPrice: 80,
+              }}
+            />
+            <ProductCard
+              imgUrl="/images/blue_chair.png"
+              alt="blue chair"
+              description={{
+                title: "WOMAN CHAIR(HSD 3356)",
+                intro:
+                  " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, tempore.",
+                originPrice: 99,
+                currentPrice: 80,
+              }}
+            />
+          </div>
+        </section>
+      </main>
       <footer></footer>
     </div>
   );
