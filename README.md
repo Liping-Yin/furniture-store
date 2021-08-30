@@ -16,11 +16,13 @@ UI/UX design is inspired by [Alamin Hossen](https://dribbble.com/shots/16039018-
 - flexbox
 - CSS3 with Sass preprocessor
 - HTML5: semantic elements
+
   - characteristics:
     - accessibility
     - readability
     - consistency
   - main specifications:
+
     - `<article>` and `<section>`
       - used as containers to group content
       - `<article>`: is intended to be independently distributed or reusable, which specifies independent, self-contained content
@@ -28,41 +30,67 @@ UI/UX design is inspired by [Alamin Hossen](https://dribbble.com/shots/16039018-
         - blog posts
         - user comments
         - product cards
-        - newspaper articles
-      -`<section>`: is a thematic grouping content,typically with a heading.
+        - newspaper articles -`<section>`: is a thematic grouping content,typically with a heading.
         - Chapters
         - Introduction
         - News items
         - Contact information
     - `<header> and <hgroup>`
+
       - `<header>`: usually at the top of a document, a section, or an article and usually contains the main heading,logo or icon,authorship information, some navigation and search tools.
       - `<hgroup>`: main heading with one or more subheadings, can only contain other headers, which is `<h1>` to `<h6>` and including `<hgroup>`.
 
       - `<aside>`
-      intend for content that is not part of the flow of the text in which is appears, but still in a related way.
+        intend for content that is not part of the flow of the text in which is appears, but still in a related way.
       - `<nav>`
-      you can have any number of `<nav>` elements on a page, such as a global navigation across the top( in the `<header>`) and local navigation( in a sidebar `<aside>`)
+        you can have any number of `<nav>` elements on a page, such as a global navigation across the top( in the `<header>`) and local navigation( in a sidebar `<aside>`)
       - `<footer>`
-      if there is a `header`, there must be a `<footer>`, generally found at the bottom of a document, a section or an article.
+        if there is a `header`, there must be a `<footer>`, generally found at the bottom of a document, a section or an article.
         - authorship information
-        - copyright information 
-        - contact information 
-        - sitemap 
+        - copyright information
+        - contact information
+        - sitemap
         - back to top links
         - related documents
       - `<small>`
-      often appears within a `<footer>` or `<aside>` element which would usually contain copyright information or legal disclaimers, and other such fine print.
+        often appears within a `<footer>` or `<aside>` element which would usually contain copyright information or legal disclaimers, and other such fine print.
       - `<time>`
-      allows an unambiguous ISO 8601 date to be attached to a human-readable version of that date.
+        allows an unambiguous ISO 8601 date to be attached to a human-readable version of that date.
       - `<figure>` and `<figcaption>`
-      wrap image content
+        wrap image content
+
 ## what do I learn ?
 
+- strategies about responsive:
+
+  - set viewport in `<meta>` tag
+  - size content to viewport:
+    - layout
+    - images: set width or height for rendering space reservation; max-width to avoid overflow
+    - responsive Typography: [fluid font-size](https://css-tricks.com/snippets/css/fluid-typography/) (using calc()); responsive root font-size(combined with rem); [max/min font-size techniques](https://css-tricks.com/how-do-you-do-max-font-size-in-css/)
+  - CSS media queries for responsiveness
+  - breakpoints selections
+    - start with small screen size, then expand to other necessary breakpoints: layout change significantly
+      - max-widh, min-width
+    - pick minor breakpoints when necessary: minor adjustment such as margin, padding, font-size,...
+      - min-width
+    - optimize text for reading
+      - maximum 70 to 80 chars(about 8 to 10 words) per line suggestions
+    - avoid simply hiding contents
+  - Chrome DevTools
+
 - Reasonable units usages
+
   - relative unit: em/rem
+  some 'rule of thumb', but not hard and fast rules
+    - font-size: rem
+    - padding and margin: em
+    - widths: em or percentage
   - absolute unit: px ,pt, cm,...
   - percentage：
     - relative to parent element: %
     - relative to viewport: vw/vh, vmin/vmax
-- CSS 'class' control for layout strategy
-- responsive Typography:
+
+- handle images
+- layout techniques: Flexbox, Grid Layout, and Multicol
+- media queries
