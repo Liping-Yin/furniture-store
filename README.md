@@ -12,9 +12,9 @@ UI/UX design is inspired by [Alamin Hossen](https://dribbble.com/shots/16039018-
 
 ## what I used in this project?
 
-- react framework
-- flexbox
-- CSS3 with Sass preprocessor
+- React framework
+- Flexbox
+- CSS3 with Sass preprocessor and BEM naming convention
 - HTML5: semantic elements
 
   - characteristics:
@@ -61,7 +61,7 @@ UI/UX design is inspired by [Alamin Hossen](https://dribbble.com/shots/16039018-
 
 ## what do I learn ?
 
-- strategies about responsive:
+- Strategies about responsive:
 
   - set viewport in `<meta>` tag
   - size content to viewport:
@@ -91,6 +91,6 @@ UI/UX design is inspired by [Alamin Hossen](https://dribbble.com/shots/16039018-
     - relative to parent element: %
     - relative to viewport: vw/vh, vmin/vmax
 
-- handle images
-- layout techniques: Flexbox, Grid Layout, and Multicol
-- media queries
+- Handle images
+- Layout techniques: Flexbox, Grid Layout, and Multicol
+- Media queries
