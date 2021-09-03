@@ -10,12 +10,49 @@ UI/UX design is inspired by [Alamin Hossen](https://dribbble.com/shots/16039018-
 - [CSS Tricks](https://css-tricks.com/);
 - [freeCodeCamp](https://www.freecodecamp.org/news/search/?query=responsive);
 
-## what I used in this project?
+## what I focused on in this project?
 
 - React framework
 - Flexbox
 - CSS3 with Sass preprocessor and BEM naming convention
-- HTML5: semantic elements
+- HTML5: Semantic elements
+
+## what do I learn ?
+
+- Strategies about responsive:
+
+  - set viewport in `<meta>` tag
+  - size content to viewport:
+    - layout
+    - images: set width or height for rendering space reservation; max-width to avoid overflow
+    - responsive Typography: [fluid font-size](https://css-tricks.com/snippets/css/fluid-typography/) (using calc()); responsive root font-size(combined with rem); [max/min font-size techniques](https://css-tricks.com/how-do-you-do-max-font-size-in-css/)
+  - CSS media queries for responsiveness
+  - breakpoints selections
+    - start with small screen size, then expand to other necessary breakpoints: layout change significantly
+      - max-widh, min-width
+    - pick minor breakpoints when necessary: minor adjustment such as margin, padding, font-size,...
+      - min-width
+    - optimize text for reading
+      - maximum 70 to 80 chars(about 8 to 10 words) per line suggestions
+    - avoid simply hiding contents
+  - Chrome DevTools
+
+- Reasonable units usages
+
+  - relative unit: em/rem
+  some 'rule of thumb', but not hard and fast rules
+    - font-size: rem
+    - padding and margin: em
+    - widths: em or percentage
+  - absolute unit: px ,pt, cm,...
+  - percentage：
+    - relative to parent element: %
+    - relative to viewport: vw/vh, vmin/vmax
+
+- Handle images
+- Layout techniques: Flexbox, Grid Layout, and Multicol
+- Media queries
+- Semantic elements
 
   - characteristics:
     - accessibility
@@ -58,39 +95,3 @@ UI/UX design is inspired by [Alamin Hossen](https://dribbble.com/shots/16039018-
         allows an unambiguous ISO 8601 date to be attached to a human-readable version of that date.
       - `<figure>` and `<figcaption>`
         wrap image content
-
-## what do I learn ?
-
-- Strategies about responsive:
-
-  - set viewport in `<meta>` tag
-  - size content to viewport:
-    - layout
-    - images: set width or height for rendering space reservation; max-width to avoid overflow
-    - responsive Typography: [fluid font-size](https://css-tricks.com/snippets/css/fluid-typography/) (using calc()); responsive root font-size(combined with rem); [max/min font-size techniques](https://css-tricks.com/how-do-you-do-max-font-size-in-css/)
-  - CSS media queries for responsiveness
-  - breakpoints selections
-    - start with small screen size, then expand to other necessary breakpoints: layout change significantly
-      - max-widh, min-width
-    - pick minor breakpoints when necessary: minor adjustment such as margin, padding, font-size,...
-      - min-width
-    - optimize text for reading
-      - maximum 70 to 80 chars(about 8 to 10 words) per line suggestions
-    - avoid simply hiding contents
-  - Chrome DevTools
-
-- Reasonable units usages
-
-  - relative unit: em/rem
-  some 'rule of thumb', but not hard and fast rules
-    - font-size: rem
-    - padding and margin: em
-    - widths: em or percentage
-  - absolute unit: px ,pt, cm,...
-  - percentage：
-    - relative to parent element: %
-    - relative to viewport: vw/vh, vmin/vmax
-
-- Handle images
-- Layout techniques: Flexbox, Grid Layout, and Multicol
-- Media queries
