@@ -1,4 +1,4 @@
-# Learn Responsive Webdesign
+# Learn Responsive Webdesign and deploy front-end at github-pages
 
 This is a frontend project to practice useful tricks of realizing responsive Weeb design. From laptop to mobile application.
 UI/UX design is inspired by [Alamin Hossen](https://dribbble.com/shots/16039018-E-commerce-Furniture-Landing-Page?utm_source=Clipboard_Shot&utm_campaign=alaminhossen75&utm_content=E%20commerce%20Furniture%20Landing%20Page&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=alaminhossen75&utm_content=E%20commerce%20Furniture%20Landing%20Page&utm_medium=Social_Share) from Dribble.
