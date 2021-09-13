@@ -3,7 +3,7 @@
 This is a frontend project to practice useful tricks of realizing responsive Weeb design. From laptop to mobile application.
 UI/UX design is inspired by [Alamin Hossen](https://dribbble.com/shots/16039018-E-commerce-Furniture-Landing-Page?utm_source=Clipboard_Shot&utm_campaign=alaminhossen75&utm_content=E%20commerce%20Furniture%20Landing%20Page&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=alaminhossen75&utm_content=E%20commerce%20Furniture%20Landing%20Page&utm_medium=Social_Share) from Dribble.
 
-### Check the [website](https://liping-yin.github.io/furniture-store/) 
+### Check the website of [furniture-store](https://liping-yin.github.io/furniture-store/) 
 ## learning resources:
 
 - [CSS Tricks](https://css-tricks.com/);
